@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil Saya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="profile.jpg" alt="Foto Profil" class="profile-img" />
+    <h1>LostSoul</h1>
+    <p class="role">Minecraft Server Specialist</p>
+    <p class="desc">Menyediakan layanan setup server Minecraft Bedrock & Java, modpack, plugin dan web.</p>
+
+    <div class="sosmed">
+      <a href="https://wa.me/6285737312031" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com/nama_ig" target="_blank">Instagram</a>
+      <a href="https://tiktok.com/@nama_tiktok" target="_blank">TikTok</a>
+    </div>
+
+    <!-- Bagian Testimoni -->
+<div class="testimoni-section">
+  <h2 style="text-align:center;">Testimoni</h2>
+  <div class="testimoni-slider">
+    <a href="testimoni1.jpg" target="_blank">
+      <img src="testimoni1.jpg" alt="Testimoni" onclick="openModal(this)">
+    </a>
+    <a href="testimoni2.jpg" target="_blank">
+      <img src="testimoni2.jpg" alt="Testimoni 2">
+    </a>
+    <a href="testimoni3.jpg" target="_blank">
+      <img src="testimoni3.jpg" alt="Testimoni 3">
+      
+<!-- Modal Zoom -->
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="imgPreview">
+</div>
+<script>
+  function openModal(img) {
+    var modal = document.getElementById("imgModal");
+    var modalImg = document.getElementById("imgPreview");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
+
+  document.querySelector(".close").onclick = function() {
+    document.getElementById("imgModal").style.display = "none";
+  };
+</script>
+</body>
+</html>
